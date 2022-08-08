@@ -26,4 +26,6 @@ typedef struct print_function
 } print_func;
 
 int _putchar(va_list arg, flags flag __attribute__((unused)));
+int _flagcheck(char s, flags *flag);
+int _printf(const char *format, ...);
 #endif /* PRINT_F */
