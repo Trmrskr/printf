@@ -1,5 +1,6 @@
 #ifndef PRINT_F
 #define PRINT_F
+#include <stdargs.h>
 
 /**
  * struct flags - declares the flag struct
