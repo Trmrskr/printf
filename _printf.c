@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			j = i + 1;
-			while (flag(format[j], &flag))
+			while (flag_check(format[j], &flag))
 				j++;
 			res += get_print_func(format[j])(va_args(args), flag);
 			if (!res)
