@@ -6,7 +6,9 @@
  * Return: On success 1.
  * On error, -1 is returned, and error is set appropriately.
  */
-int _putchar(char c)
+int _putchar (va_list arg, flags flag __attribute__((unused)))
 {
-	return (write(1, &c, 1));
+    char c = va_arg(arg, char);
+    write(1, &c, 1);
+    return (1);
 }
