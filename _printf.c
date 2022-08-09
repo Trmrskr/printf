@@ -15,12 +15,10 @@ int _printf(const char *format, ...)
 	flags flag;
 
 	init_flag(&flag, 0, 0, 0);
-
 	if (!format)
 		return (-1);
 
 	va_start(args, format);
-
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -48,6 +46,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-
 	return (count);
 }
