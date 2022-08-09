@@ -1,14 +1,16 @@
 #include "main.h"
 /**
- * flag - check if a character is a flag character
+ * flag_check - if a character is a flag character
  * @c: character to be checked
  * @flag: flag structure to be altered
+ * Return: 1 if flags discovered o 0 otherwise
  */
 
-int flag_check(char s, flags *flag)
+int flag_check(char c, flags *flag)
 {
 	int i = 0;
-	switch (s)
+
+	switch (c)
 	{
 		case '+':
 			flag->plus = 1;

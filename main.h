@@ -1,32 +1,44 @@
 #ifndef PRINT_F
 #define PRINT_F
-#include <stdargs.h>
+#include <stdarg.h>
+#include <stdlib.h>
 
 /**
- * struct flags - declares the flag struct
+ * struct flag_s - declares the flag struct
  * @plus: the plus flag
  * @space: the space flag
  * @hash: the hash flag.
  */
 
-typedef struct flag{
-	int plus = 0;
-	int space = 0;
-	int hash = 0;
+typedef struct flag_s
+{
+	int plus;
+	int space;
+	int hash;
 } flags;
 
 /**
- * struct print_func - declares a struct which takes a specifier and process it with a function.
+ * struct print_function - declares a struct which takes a specifier and
+ * process it with a function.
  * @specifier: the specifier character
- * @specifier_func: the specifier pointer function that will process the specifier
+ * @specifier_func: the specifier pointer function that will process the
+ * specifier
  */
+
 typedef struct print_function
 {
 	char specifier;
-	int (*specifier_func)(va_list args, flags flag);
+	int (*specifier_func)(va_list arg, flags flag);
 } print_func;
 
-int _putchar(va_list arg, flags flag __attribute__((unused)));
-int _flagcheck(char s, flags *flag);
+int _putchar(char);
+int print_char(va_list arg, flags flag __attribute__((unused)));
+int flag_check(char s, flags *flag);
+int (*get_print_func(char c))(va_list arg, flags flag);
 int _printf(const char *format, ...);
+int _puts(char *);
+int print_string(va_list arg, flags flag __attribute__((unused)));
+int print_percent(va_list __attribute__((unused)), flags flag);
+int print_int(va_list arg, flags flag __attribute__((unused)));
+
 #endif /* PRINT_F */
