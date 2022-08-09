@@ -2,8 +2,9 @@
 
 /**
  * print_string - takes a va_list argument and print
- * @va_list: string to be printed
+ * @arg: string to be printed
  * @flag: flag character
+ * Return: the number of characters printed
  */
 
 int print_string(va_list arg, flags flag __attribute__((unused)))

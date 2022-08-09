@@ -4,6 +4,7 @@
  * _printf - clone of the c printf standard library function
  * @format: the string to be formatted to standard output
  * @...: Optional arguments
+ * Return: count of characters printed
  */
 
 int _printf(const char *format, ...)
@@ -11,11 +12,13 @@ int _printf(const char *format, ...)
 	va_list args;
 	int i = 0, j = 0, count = 0;
 	int (*res_func)(va_list, flags);
-	flags flag = {0, 0, 0};
+	flags flag;
+
+	init_flag(&flag, 0, 0, 0);
 
 	if (!format)
 		return (-1);
-	
+
 	va_start(args, format);
 
 	while (format[i])
@@ -32,7 +35,8 @@ int _printf(const char *format, ...)
 				count += res_func(args, flag);
 				i = j;
 			}
-			else{
+			else
+			{
 				count += _putchar(format[i]);
 			}
 		}
@@ -40,6 +44,7 @@ int _printf(const char *format, ...)
 		{
 			count += _putchar(format[i]);
 		}
+		init_flag(&flag, 0, 0, 0);
 		i++;
 	}
 	va_end(args);

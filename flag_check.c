@@ -1,4 +1,23 @@
 #include "main.h"
+
+/**
+ * init_flag - a function that initialize flag
+ * @flag: the flag struct
+ * @plus: the plus flag
+ * @space: the space flag
+ * @hash: the hash flag
+ */
+
+void init_flag(flags *flag, int plus, int space, int hash)
+{
+	if (flag != NULL)
+	{
+		flag->plus = plus;
+		flag->space = space;
+		flag->hash = hash;
+	}
+}
+
 /**
  * flag_check - if a character is a flag character
  * @c: character to be checked

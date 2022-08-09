@@ -31,6 +31,7 @@ typedef struct print_function
 	int (*specifier_func)(va_list arg, flags flag);
 } print_func;
 
+void init_flag(flags *, int, int, int);
 int _putchar(char);
 int print_char(va_list arg, flags flag __attribute__((unused)));
 int flag_check(char s, flags *flag);
@@ -39,6 +40,6 @@ int _printf(const char *format, ...);
 int _puts(char *);
 int print_string(va_list arg, flags flag __attribute__((unused)));
 int print_percent(va_list __attribute__((unused)), flags flag);
-int print_int(va_list arg, flags flag __attribute__((unused)));
+int print_int(va_list arg, flags flag);
 
 #endif /* PRINT_F */

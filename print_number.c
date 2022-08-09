@@ -6,11 +6,12 @@ int count_digit(int);
 
 /**
  * print_int - print integers both positive and negative using print_digit
- * @n: number to be printed
+ * @arg: number to be printed
+ * @flag: flag
  * Return: count of digits printed, sign inclusive
  */
 
-int print_int(va_list arg, flags flag __attribute__((unused)))
+int print_int(va_list arg, flags flag)
 {
 	int n = va_arg(arg, int);
 	int count = 0;
@@ -21,6 +22,11 @@ int print_int(va_list arg, flags flag __attribute__((unused)))
 		n = -1 * n;
 		count = 1;
 	}
+
+	if (flag.space == 1 && flag.plus == 0 && n >= 0)
+		count += _putchar(' ');
+	if (flag.plus == 1 && n >= 0)
+		count += _putchar('+');
 
 	print_digit(n);
 	count += count_digit(n);
@@ -35,7 +41,8 @@ int print_int(va_list arg, flags flag __attribute__((unused)))
 
 void print_digit(int n)
 {
-	if (n < 10){
+	if (n < 10)
+	{
 		_putchar(n + '0');
 		return;
 	}
@@ -54,6 +61,6 @@ int count_digit(int n)
 {
 	if (n == 0)
 		return (0);
-	return (1 + count_digit(n/10));
+	return (1 + count_digit(n / 10));
 
 }

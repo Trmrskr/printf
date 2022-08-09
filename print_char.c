@@ -3,8 +3,8 @@
 
 /**
  * print_char - prints characters using _putchar
- * args: take argument of type va_list
- * flag: takes a flag argument unused
+ * @arg: take argument of type va_list
+ * @flag: takes a flag argument unused
  * Return: 1
  */
 

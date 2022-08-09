@@ -2,7 +2,7 @@
 
 /**
  * print_percent - prints percent symbols
- * @args: unused va_list argument
+ * @arg: unused va_list argument
  * @flag: unused flag argument
  * Return: 1
  */
