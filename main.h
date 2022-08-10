@@ -44,10 +44,11 @@ int print_int(va_list arg, flags flag);
 int print_binary(va_list arg, flags flag __attribute__((unused)));
 int print_unsigned(va_list arg, flags flag __attribute__((unused)));
 int print_octal(va_list arg, flags flag);
-int hex_digit(unsigned int, int);
+int hex_digit(unsigned long int, int);
 int print_small_hex(va_list arg, flags flag);
 int print_big_hex(va_list arg, flags flag);
 int print_leo_string(va_list arg, flags flag __attribute__((unused)));
 int print_address(va_list arg, flags flag __attribute__((unused)));
+int rev_string(va_list arg, flags flag __attribute__((unused)));
 
 #endif /* PRINT_F */

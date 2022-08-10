@@ -9,11 +9,11 @@
  * Return: count of the binary digit
  */
 
-int hex_digit(unsigned int n, int small)
+int hex_digit(unsigned long int n, int small)
 {
 	int count = 0;
 	int mod;
-	unsigned int num = n;
+	unsigned long int num = n;
 	char *small_hex = "0123456789abcdef";
 	char *big_hex = "0123456789ABCDEF";
 
@@ -42,7 +42,7 @@ int hex_digit(unsigned int n, int small)
 int print_small_hex(va_list arg, flags flag)
 {
 	int count = 0;
-	unsigned int n = va_arg(arg, unsigned int);
+	unsigned long int n = va_arg(arg, unsigned int);
 
 	if (n != 0 && flag.hash == 1)
 		count = _puts("0x");
@@ -60,7 +60,7 @@ int print_small_hex(va_list arg, flags flag)
 int print_big_hex(va_list arg, flags flag)
 {
 	int count = 0;
-	unsigned int n = va_arg(arg, unsigned int);
+	unsigned long int n = va_arg(arg, unsigned int);
 
 	if (n != 0 && flag.hash == 1)
 		count = _puts("0X");

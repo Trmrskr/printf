@@ -23,7 +23,8 @@ int (*get_print_func(char c))(va_list arg, flags flag)
 		{'x', print_small_hex},
 		{'X', print_big_hex},
 		{'S', print_leo_string},
-		{'p', print_address}
+		{'p', print_address},
+		{'r', rev_string}
 	};
 	i = 0;
 

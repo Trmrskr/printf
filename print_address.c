@@ -10,8 +10,11 @@
 
 int print_address(va_list arg, flags flag __attribute__((unused)))
 {
-	void *address = va_arg(arg, void *);
-	char *addr = (char *)address;
+	int count = 0;
 
-	return (_puts(addr));
+	unsigned long int address = va_arg(arg, unsigned long int);
+
+	count += _puts("0x");
+	count += hex_digit(address, 1);
+	return (count);
 }

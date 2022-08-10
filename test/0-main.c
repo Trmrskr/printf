@@ -7,6 +7,7 @@ int main(void)
 	int len;
 	int len2;
 	unsigned int ui;
+	void *addr;
 	_printf("%c%c%c%c%c%c%c%c%c%c\n", 't', 'a', 'm', 'a', 'r', 'a', 'k', 'u', 'r', 'o');
 	printf("%c%c%c%c%c%c%c%c%c%c\n", 't', 'a', 'm', 'a', 'r', 'a', 'k', 'u', 'r', 'o');
 	len = _printf("Let's try to printf a simple sentence.\n");
@@ -47,6 +48,11 @@ int main(void)
 	len2= printf("Hexadecimal: [%X]\n", ui);
 	_printf("Length: [%d]\n", len);
 	printf("Length: [%d]\n", len2);
-	
+	len = _printf("%S is ALX\n", "Best\nSchool");
+	_printf("%d\n", len);
+	addr = (void *)0x77ffe637541f0;
+	len = _printf("Address: [%p]\n", addr);
+	_printf("Length: [%i]\n", len);
+	_printf("Unknown:[%r]\n", "This is a string");
 	return (0);
 }
