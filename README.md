@@ -23,6 +23,7 @@ oduced yet.
 - length modifiers is not handled yet.
   Note that we will not provide the \_putchar function for this project
   All your header files should be include guarded
+  Don’t forget to push your header file
 
 ## Specifier handling
 
