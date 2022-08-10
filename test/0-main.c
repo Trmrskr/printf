@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
 int main(void)
 {
 	int len;
 	int len2;
+	unsigned int ui;
 	_printf("%c%c%c%c%c%c%c%c%c%c\n", 't', 'a', 'm', 'a', 'r', 'a', 'k', 'u', 'r', 'o');
 	printf("%c%c%c%c%c%c%c%c%c%c\n", 't', 'a', 'm', 'a', 'r', 'a', 'k', 'u', 'r', 'o');
 	len = _printf("Let's try to printf a simple sentence.\n");
@@ -25,5 +27,26 @@ int main(void)
 	printf("Len:[%d]\n", len);
 	_printf("Unknown:[%r]\n");
 /*	printf("Unknown:[%r]\n"); */
+	len = _printf("Binary: [%b]\n", 98);
+	len2 = _printf("Binary: [%b]\n", 252);
+	_printf("Length: [%i]\n", len);
+	_printf("Length: [%i]\n", len2);
+
+	ui = (unsigned int)INT_MAX + 1024;
+	_printf("Unsigned: [%u]\n", ui);
+	printf("Unsigned: [%u]\n", ui);
+	len = _printf("Octal: [%o]\n", ui);
+	len2 = printf("Octal: [%o]\n", ui);
+	printf("Length: [%i]\n", len);
+	_printf("Length: [%i]\n", len2);
+	len = _printf("Hexadecimal: [%x]\n", ui);
+	len2= printf("Hexadecimal: [%x]\n", ui);
+	_printf("Length: [%d]\n", len);
+	printf("Length: [%d]\n", len2);
+	len = _printf("Hexadecimal: [%X]\n", ui);
+	len2= printf("Hexadecimal: [%X]\n", ui);
+	_printf("Length: [%d]\n", len);
+	printf("Length: [%d]\n", len2);
+	
 	return (0);
 }

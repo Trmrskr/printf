@@ -16,7 +16,12 @@ int (*get_print_func(char c))(va_list arg, flags flag)
 		{'s', print_string},
 		{'%', print_percent},
 		{'i', print_int},
-		{'d', print_int}
+		{'d', print_int},
+		{'b', print_binary},
+		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_small_hex},
+		{'X', print_big_hex}
 	};
 	i = 0;
 
