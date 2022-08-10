@@ -21,6 +21,7 @@ oduced yet.
 - precision is not handled yet.
 
 - length modifiers is not handled yet.
+  Note that we will not provide the \_putchar function for this project
 
 ## Specifier handling
 
@@ -28,4 +29,4 @@ Specifier to be handled by the printf function include, c, s, %, d, i, etc.
 
 # ALX SE PROGRAMME
 
-project handled by ADESOKAN OLUWAPELUMI AND ALALE SIMON TAMARA-KURO  
+project handled by ADESOKAN OLUWAPELUMI AND ALALE SIMON TAMARA-KURO
