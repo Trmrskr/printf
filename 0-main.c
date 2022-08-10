@@ -18,6 +18,7 @@ int main(void)
 	printf("Negative: [%d, %i]\n", len2, len2);
 	_printf("Character: [%c]\n", 'H');
 	printf("Character: [%c]\n", 'H');
+	printf("Character: [%c]\n", 'H');
 	len = _printf("String: [%s]\n", "I am a string !");
 	len2 = printf("String: [%s]\n", "I am a string !");
 	_printf("Len:[%d]\n", len);
@@ -26,7 +27,6 @@ int main(void)
 	len2 = printf("Percent: [%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len);
-	_printf("Unknown:[%r]\n");
 	_printf("Unknown:[%r]\n");
 /*	printf("Unknown:[%r]\n"); */
 	len = _printf("Binary: [%b]\n", 98);
@@ -52,8 +52,6 @@ int main(void)
 	len = _printf("%S is ALX\n", "Best\nSchool");
 	_printf("%d\n", len);
 	addr = (void *)0x77ffe637541f0;
-	len = _printf("Address: [%p]\n", addr);
-	_printf("Length: [%i]\n", len);
-	_printf("Unknown:[%r]\n", "This is a string");
+	_printf("Address: [%p]\n", addr);
 	return (0);
 }
