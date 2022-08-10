@@ -28,4 +28,4 @@ Specifier to be handled by the printf function include, c, s, %, d, i, etc.
 
 # ALX SE PROGRAMME
 
-project handled by ALALE SIMON TAMARA-KURO AND ADESOKAN OLUWAPELUMI
+project handled by ADESOKAN OLUWAPELUMI AND ALALE SIMON TAMARA-KURO  
