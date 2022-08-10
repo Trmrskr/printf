@@ -47,8 +47,9 @@ int main(void)
 	len2= printf("Hexadecimal: [%X]\n", ui);
 	_printf("Length: [%d]\n", len);
 	printf("Length: [%d]\n", len2);
+	len2 = printf("Octal: [%o]\n", ui);
 	_printf("Length: [%i]\n", len2);
 	printf("Negative: [%d, %i]\n", len2, len2);
-	
+	printf("Unsigned: [%u]\n", ui);	
 	return (0);
 }
