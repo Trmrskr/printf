@@ -26,6 +26,7 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len);
 	_printf("Unknown:[%r]\n");
+	_printf("Unknown:[%r]\n");
 /*	printf("Unknown:[%r]\n"); */
 	len = _printf("Binary: [%b]\n", 98);
 	len2 = _printf("Binary: [%b]\n", 252);
