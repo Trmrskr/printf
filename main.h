@@ -42,7 +42,7 @@ int print_string(va_list arg, flags flag __attribute__((unused)));
 int print_percent(va_list __attribute__((unused)), flags flag);
 int print_int(va_list arg, flags flag);
 int print_binary(va_list arg, flags flag __attribute__((unused)));
-int print_unsigned(va_list arg, flags flag __attribute__((unused)));
+int print_unsigned(va_list arg, flags flag);
 int print_octal(va_list arg, flags flag);
 int hex_digit(unsigned long int, int);
 int print_small_hex(va_list arg, flags flag);

@@ -18,9 +18,8 @@ int print_int(va_list arg, flags flag)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		count += _putchar('-');
 		n = -1 * n;
-		count = 1;
 	}
 
 	if (flag.space == 1 && flag.plus == 0 && n >= 0)

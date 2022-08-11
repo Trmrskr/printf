@@ -26,7 +26,7 @@ int unsigned_digit(unsigned int n)
  * Return: count of digits printed
  */
 
-int print_unsigned(va_list arg, flags flag __attribute__((unused)))
+int print_unsigned(va_list arg, flags flag)
 {
 	int count = 0;
 	long num = va_arg(arg, long);
@@ -38,6 +38,9 @@ int print_unsigned(va_list arg, flags flag __attribute__((unused)))
 		num = UINT_MAX;
 
 	number = num;
+
+	if (flag.space == 1 && num > 0)
+		count += _putchar(' ');
 
 	count = unsigned_digit(number);
 
