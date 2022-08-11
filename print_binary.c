@@ -6,7 +6,6 @@
  * binary_digit - prints the binary digit of a number
  * @n: the number
  * Return: count of the binary digit
- * 
  */
 
 int binary_digit(unsigned long n)

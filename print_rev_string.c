@@ -18,13 +18,13 @@ int _strlen(char *s)
 }
 
 /**
- * rev_string - reverses a string
+ * print_rev_string - reverses a string
  * @arg: argumen to type va_list
  * @flag: flag
  * Return: the count of string printed
  */
 
-int rev_string(va_list arg, flags flag __attribute__((unused)))
+int print_rev_string(va_list arg, flags flag __attribute__((unused)))
 {
 	char *str = va_arg(arg, char *);
 	int len, count = 0, i = 0;

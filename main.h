@@ -49,6 +49,7 @@ int print_small_hex(va_list arg, flags flag);
 int print_big_hex(va_list arg, flags flag);
 int print_leo_string(va_list arg, flags flag __attribute__((unused)));
 int print_address(va_list arg, flags flag __attribute__((unused)));
-int rev_string(va_list arg, flags flag __attribute__((unused)));
+int print_rev_string(va_list arg, flags flag __attribute__((unused)));
+int print_rot13(va_list arg, flags flag __attribute__((unused)));
 
 #endif /* PRINT_F */

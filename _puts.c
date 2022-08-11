@@ -4,7 +4,6 @@
  * _puts - prints the characters in a string
  * @str: string whose character is to be printed
  * Return: length of string
- * 
  */
 
 int _puts(char *str)

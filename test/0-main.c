@@ -24,11 +24,10 @@ int main(void)
 	printf("Len:[%d]\n", len);
 	len = _printf("Percent: [%%]\n");
 	len2 = printf("Percent: [%%]\n");
-	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len);
-	_printf("Unknown:[%r]\n");
-	_printf("Unknown:[%r]\n");
-/*	printf("Unknown:[%r]\n"); */
+	_printf("Length:[%d]\n", len);
+	printf("Length:[%d]\n", len);
+	len = _printf("Unknown:[%r]\n", "Good");
+	_printf("Length:[%i]\n", len);
 	len = _printf("Binary: [%b]\n", 98);
 	len2 = _printf("Binary: [%b]\n", 252);
 	_printf("Length: [%i]\n", len);
@@ -55,5 +54,7 @@ int main(void)
 	len = _printf("Address: [%p]\n", addr);
 	_printf("Length: [%i]\n", len);
 	_printf("Unknown:[%r]\n", "This is a string");
+	len = _printf("Rot13'd string: [%R]\n");
+	_printf("Length: [%i]\n", len);
 	return (0);
 }
