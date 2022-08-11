@@ -25,9 +25,10 @@ oduced yet.
   All your header files should be include guarded
   Don’t forget to push your header file
 
-## Specifier handling
+## Flags and Specifier handling
 
-Specifier to be handled by the printf function include, c, s, %, d, i, etc.
+Specifier to be handled by the printf function include, c, s, %, d, i, r, R, S, o, x, X, u, etc.
+Flags such as +, ' ', and # were handled in limited cases.
 
 # ALX SE PROGRAMME
 
