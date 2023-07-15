@@ -27,13 +27,6 @@ oduced yet.
   All your header files should be include guarded
   Don’t forget to push your header file
 
-# Printf
-
-![Betty style](https://img.shields.io/badge/betty-style%20guide-purple?style=round-square)
-![Latest commit](https://img.shields.io/github/last-commit/B3zaleel/printf/main?style=round-square)
-
-This project is a simplistic implementation of the [`printf`](https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm) function in the __C__ standard libray.
-
 ## How To Use
 
 The `main.h` header must be included before you can use the function. The `_printf` function returns the number of characters that were printed to the stdout stream.
